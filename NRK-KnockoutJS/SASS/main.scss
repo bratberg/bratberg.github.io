@@ -1,0 +1,49 @@
+$nrk-black: #2e2e2e;
+
+@mixin transition($transition-property, $transition-time, $method) {
+    -webkit-transition: $transition-property $transition-time $method;
+    -moz-transition: $transition-property $transition-time $method;
+    -ms-transition: $transition-property $transition-time $method;
+    -o-transition: $transition-property $transition-time $method;
+    transition: $transition-property $transition-time $method;
+}
+
+h1, .input-group, #nrk-table table {
+	margin-bottom: 30px;
+	width: 100%;
+}
+
+h1 {
+	text-align: center;
+}
+
+#nrk-table {
+	table {
+		border-collapse: collapse;
+
+		th, td {
+			border: 2px solid $nrk-black;
+			padding: 10px 15px;
+		}
+
+		th {
+			text-align: left;
+			text-transform: capitalize;
+			background-color: $nrk-black;
+			color: #fff;
+			font-size: 18px;
+			cursor: pointer;
+			@include transition(background-color, 0.5s, ease);
+
+			&:hover {
+				background-color: lighten($nrk-black, 10%);
+			}
+		}
+
+		tr {
+			&:nth-child(odd) {
+				background-color: #ddd;
+			}
+		}
+	}
+}

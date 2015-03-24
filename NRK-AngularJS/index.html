@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html ng-app="nrkApp">
+	<head>
+	    <title>NRK - AngularJS</title>
+	    <meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <script src="JS/Dependencies/angular.min.js"></script>
+	    <script src="JS/Dependencies/underscore-min.js"></script>
+	    <script src="JS/app.js"></script>
+	    <link rel="stylesheet" type="text/css" href="CSS/Dependencies/bootstrap.min.css">
+	    <link rel="stylesheet" type="text/css" href="CSS/main.css">
+	</head>
+	<body ng-controller="NrkController">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
+					<h1>{{title}}</h1>
+					<table>
+					    <thead>
+				    		<tr>
+				    			<th><a href="" ng-click="predicate = 'region'; reverse=!reverse">{{regionLabel}}</a></th>
+				    			<th><a href="" ng-click="predicate = 'landArea'; reverse=!reverse">{{landAreaLabel}}</a></th>
+				    			<th><a href="" ng-click="predicate = 'waterArea'; reverse=!reverse">{{waterAreaLabel}}</a></th>
+				    			<th class="hidden-xs"><a href="" ng-click="predicate = 'year'; reverse=!reverse">{{yearLabel}}</a></th>
+				    		</tr>
+					    </thead>
+					    <tbody>
+					    	<tr ng-repeat="entry in entries | orderBy:predicate:reverse">
+					    		<td>{{entry.region}}</td>
+					    		<td>{{entry.landArea | withUnit : entry.unit}}</td>
+					    		<td>{{entry.waterArea | withUnit : entry.unit}}</td>
+					    		<td class="hidden-xs">{{entry.year}}</td>
+					    	</tr>
+					    </tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

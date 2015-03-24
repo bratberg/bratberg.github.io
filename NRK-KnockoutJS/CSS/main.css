@@ -9,7 +9,7 @@ h1 {
   border-collapse: collapse; }
   #nrk-table table th, #nrk-table table td {
     border: 2px solid #2e2e2e;
-    padding: 10px 15px; }
+    padding: 5px 10px; }
   #nrk-table table th {
     text-align: left;
     text-transform: capitalize;

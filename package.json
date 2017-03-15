@@ -1,0 +1,22 @@
+{
+  "name": "bratberg.github.io",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/bratberg/bratberg.github.io.git",
+  "author": "bratberg <bratberg@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "predeploy": "yarn run generate",
+    "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
+  },
+  "dependencies": {
+    "nuxt": "latest"
+  },
+  "devDependencies": {
+    "push-dir": "^0.4.1"
+  }
+}

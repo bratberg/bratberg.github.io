@@ -1,1 +1,0 @@
-webpackJsonp([0],{123:function(e,n,t){var r=t(16)(null,t(125),null,null);e.exports=r.exports},125:function(e,n){e.exports={render:function(){var e=this,n=e.$createElement;return(e._self._c||n)("h1",[e._v("Hello!")])},staticRenderFns:[]}}});

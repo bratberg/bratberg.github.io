@@ -14,7 +14,8 @@
     "deploy": "push-dir --dir=dist --branch=master --cleanup"
   },
   "dependencies": {
-    "nuxt": "latest"
+    "nuxt": "latest",
+    "vuetify": "latest"
   },
   "devDependencies": {
     "push-dir": "^0.4.1"
